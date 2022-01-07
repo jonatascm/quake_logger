@@ -13,7 +13,7 @@ export const clientConnect = (line) => {
     players[position] = playerName;
     games[`game_${match}`].kills[playerName] = 0;
   } else if (players[position] != playerName) {
-    //Change replace player name in kills property
+    //Replace player name in kills property
     games[`game_${match}`].kills[playerName] =
       games[`game_${match}`].kills[players[position]] ?? 0;
     delete games[`game_${match}`].kills[players[position]];

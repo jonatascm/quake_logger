@@ -18,6 +18,7 @@ const countKills = (line) => {
   }
 
   if (killer) {
+    //If the players kills himself remove a kill
     if (killer == victim) {
       kills[killer]--;
     } else {
@@ -26,6 +27,7 @@ const countKills = (line) => {
   }
 
   if (victim) {
+    //If the killer is <world> remove a kill from player
     if (!killer) {
       kills[victim]--;
     }
